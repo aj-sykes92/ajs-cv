@@ -37,3 +37,11 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# intermediate and log files from build
+*.bcf
+*.aux
+*.log
+
+# knitted cv file
+*.pdf

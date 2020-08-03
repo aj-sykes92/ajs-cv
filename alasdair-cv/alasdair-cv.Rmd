@@ -2,71 +2,134 @@
 name: Alasdair 
 surname: Sykes
 position: "Agricultural Systems Modeller"
-address: "Peter Wilson Building, King's Buildings, Edinburgh EH9 3JG"
+address: "Peter Wilson Building, King's Buildings, Edinburgh, Scotland EH9 3JG"
 phone: +44 131 535 4383
 profilepic: prof-pic.jpeg
-www: alasdair-sykes.me
+www: alasdairsykes.me
 email: alasdair.sykes@sruc.ac.uk
 twitter: alasdair_sykes
 github: aj-sykes92
 linkedin: alasdair-sykes-1b81435a
+researchgate: alasdair_sykes
 date: "`r format(Sys.time(), '%B %Y')`"
-aboutme: "Marie is a Polish and naturalized-French physicist and chemist who conducts pioneering research on radioactivity."
+aboutme: "Alasdair is an environmental modeller and data scientist interested in agriculture and climate change."
 output: vitae::awesomecv
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(dplyr)
 ```
 
-# Some stuff about me
+# About
 
- * I poisoned myself doing research.
- * I was the first woman to win a Nobel prize
- * I was the first person and only woman to win a Nobel prize in two different sciences.
+Alasdair's current research focuses on understanding the role of agriculture in greenhouse gas mitigation and food security. Alasdair is currently employed as an agricultural systems modeller by **Scotland’s Rural College**, based in the **Rural Economy, Environment and Society** research group; he is also the scientific lead for the [\textcolor{blue}{agrecalc}](https://www.agrecalc.com) carbon footprinting software project. His research interests include:
+
+* Conducting and scaling bottom-up analyses to provide decision-support for policy
+* Developing empirical modelling approaches to balance data burden, flexibility and accuracy in real-world applications
+* Repurposing existing data to address data-poor research areas
+* Translating academic research into software to improve knowledge exchange
 
 # Education
 
 ```{r}
-library(tibble)
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Informal studies", "1889-91", "Flying University", "Warsaw, Poland",
-  "Master of Physics", "1893", "Sorbonne Université", "Paris, France",
-  "Master of Mathematics", "1894", "Sorbonne Université", "Paris, France"
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
-```
-
-# Nobel Prizes
-
-```{r}
-tribble(
-  ~Year, ~Type, ~Desc,
-  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
-  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
-) %>% 
-  brief_entries(
-    glue::glue("Nobel Prize in {Type}"),
-    Year, 
-    Desc
-  )
+readr::read_csv("tables/education.csv") %>%
+  detailed_entries(Degree, Year, Institution, Subject)
 ```
 
 # Publications
 
 ```{r}
-library(dplyr)
-scholar::get_publications("EmD_lTEAAAAJ&EmD_lTEAAAAJ&") %>% 
-  filter(cites > 30) %>% 
+
+# request pubs from my google scholar page
+scholar::get_publications("bipLv_YAAAAJ") %>% 
+  filter(title != "Developing an environmental calculator for application in the beef industry") %>%
   distinct(title, .keep_all = TRUE) %>%
   transmute(bibtype = "Article", author = as.character(author),
             title = as.character(title),
-            journaltitle = as.character(journal), year, key = row_number()) %>% 
+            journaltitle = as.character(journal), year, key = dplyr::row_number()) %>%
+  arrange(desc(year)) %>%
   RefManageR::as.BibEntry() %>% 
-  RefManageR::WriteBib("curie.bib")
+  RefManageR::WriteBib("ajs-googlescholar.bib")
 
-bibliography_entries("curie.bib")
+# write out bib entries
+bibliography_entries("ajs-googlescholar.bib")
+
 ```
 
+# Skills portfolio
+
+## Programming, analysis and data handling
+
+Alasdair manages the majority of his daily workflow via **R**, **RStudio**, **Git** and [\textcolor{blue}{GitHub}](https://www.github.com/aj-sykes92). His skills include:
+
+* R package development and building R-based software, such as [\textcolor{blue}{agrecalc}](https://www.agrecalc.com).
+* Web application creation with R Shiny, such as [\textcolor{blue}{this}](https://alasdair-sykes.shinyapps.io/agroforestry-defra-prelim/) recent project for the UK Government.
+* Dissemination of code and analysis with R Markdown. This CV is built using R Markdown and the `vitae` package. Alasdair's [\textcolor{blue}{personal website}](https://www.alasdairsykes.me) is created and maintained with R and `blogdown`.
+* Model fitting and validation, including leading-edge approaches e.g. support vector machine, random forest regression, artificial neural network models.
+* Stochastic modelling and Bayesian statistics, particularly Monte Carlo simulation.
+* Web scraping and social media-based data collection and [\textcolor{blue}{visualisation}](https://www.fringebiscuit.com/trends-landing-page).
+* Text mining and natural language processing (NLP).
+* Geographic information system (GIS) based data processing, manipulation and modelling.
+
+In addition to R, Alasdair also has familiarity with Microsoft Visual Basic for Applications (VBA), Python and Matlab. He has a particular interest in the use of Bayesian statistics in empirical modelling, particularly stochastic simulation modelling for uncertainty analysis. He has utilised these approaches extensively, and taught them at MSc level.
+
+## Academic writing
+Alasdair writes in a variety of styles and contexts, including:
+
+* Peer-reviewed publications, including original research, meta-analysis and review articles.
+* Report writing to summarise project progress and research outcomes for stakeholders.
+* Production of written learning support materials for taught courses, such as [\textcolor{blue}{this}](https://www.alasdairsykes.me/read-me-im-your-project-introduction) recent handout on soil carbon modelling.
+
+## Knowledge exchange and communication
+
+Alasdair presents on his work frequently, and is comfortable in both formal presentations and less formal discussions. These have included:
+
+* Press conferences for the [\textcolor{blue}{agrecalc}](https://www.agrecalc.com) project *(Remote, 2020)*.
+* Consultation on carbon footprinting for the BBC's Countryfile program *(Remote, 2020)*.
+* Meetings with farmer groups around Scotland to discuss the latest climate science as it pertains to agriculture (2019).
+* A [\textcolor{blue}{presentation}](https://github.com/EdinbR/edinbr-talks/raw/master/2019-01-16/Alasdair%20Sykes%20-%20Fringebiscuit%20presentation%20v1%20(no%20tokens).pptx) to the Edinburgh R User Group on using R to collect and analyse data from Twitter *(Edinburgh, 2019)*.
+* An oral presentation on multi-disciplinary assessment of carbon sequestration in global agricultural soils at the International Conference on Agricultural GHG Emissions and Food Security *(Berlin, Germany 2018)*.
+*  An invitation by the European Innovation Partnership to participate as an expert panellist facilitating discussion of farm-level modelling tools for the EIP-AGRI Workshop *(Zagreb, Croatia, 2017)*.
+* An invited submission on approaches to farm-level modelling of GHG emissions at II SIGEE (2nd International Symposium on Greenhouse Gases in Agriculture), *(Campo Grande, Brazil, 2016)*. 
+
+## Lecturing and module design
+Alasdair currently contributes to three University of Edinburgh MSc courses (Ecological Economics, Environmental Protection and Management and Soils and Sustainability). He teaches on R programming, environmental modelling, data science and quantitative statistics. In addition to lecture and workshop-based teaching formats, Alasdair also delivers fieldwork-based content on an annual multi-course MSc field trip to Imlil, Morocco (2016-2020). Beginning 2016, Alasdair designed a course module on cost-benefit analysis and Monte Carlo simulation which he has delivered for the last three academic years to Ecological Economics students.
+
+## Student supervision
+Alasdair has supervised eight MSc-level research dissertations to date, the majority of which focused on carbon footprinting of agricultural systems. Alasdair also co-supervises an ongoing PhD project entitled *Exploring technical, economic and behavioural barriers to global soil carbon sequestration *.
+
+# Research and Experience
+
+## The [\textcolor{blue}{agrecalc}](https://www.agrecalc.com) carbon footprinting project --- scientific and development lead (Scotland's Rural College, 2019--Ongoing)
+
+Alasdair gained his doctorate through development of carbon footprinting methodologies in the *agrecalc* carbon footprinting tool. Since graduating, he has become the scientific lead on commercial development of this model, which aims to be the best carbon foootprinting tool for global agriculture. Alasdair's role is to design and build the core model elements, to provide expert assistance to the *agrecalc* team in the field of carbon footprinting, and to ensure the tool reflects the most up-to-date climate science.
+\newpage
+
+## Soils-R-GGREAT: Soils Research to deliver Greenhouse Gas Removals and Abatement Technologies (NERC, 2017--2020)
+
+Alasdair contributed full-time to this NERC-funded multi-institutional project until 2020. The project aimed to employ a range of methodologies — such as life cycle analysis, biophysical modelling, and economic modelling — to quantify the global potential of agricultural soils to facilitate greenhouse gas removals (GGR) through soil carbon sequestration. His role was to develop modelling approaches to define a marginal abatement cost curve for GGR by global soils. He remains involved in this project in a mentorship/supervisory role.
+
+## Clean Growth through Sustainable Intensification (Defra, 2018--2020)
+
+To support agricultural policy decision-making by Defra, Alasdairs contribution to this project focused on the development of a number of technical ‘fiches’ providing rapid insight into the abatement potential and costs associated with a number of agricultural GHG mitigation measures. Alasdair developed the requisite models for a number of soil- and land-based mitigation measures, including several novel approaches which had seen no previous inclusion in the UK policy framework. This [\textcolor{blue}{interactive application}](https://alasdair-sykes.shinyapps.io/agroforestry-defra-prelim/) for agroforestry is one of the core outputs from this project.
+
+## Literature review on carbon sequestration in the land use sectors (OECD, 2018)
+
+A research team from SRUC was contracted to contribute to the Organisation for Economic Co-operation and Development (OECD)’s project ‘Financing Climate Futures’. This research combined It comprised quantitative and qualitative approaches to provide an overview of the measures available to sequester C above and below ground in the agriculture, forestry and other land use sectors (AFOLU). Alasdair contributed to a quantitative meta-analysis of the global potential of carbon sequestration in agricultural soils, and developed the results of this analysis into a simple decision-support model for submission to the OECD.
+
+## Modelling the emissions intensity of Scottish agriculture (ClimateXChange, Scottish Govt., 2017)
+
+To facilitate Scottish Govt. policy-makers, this project developed a decision support tool for tracking the emissions intensity of Scottish agricultural production. Alasdair provided research input into tool development by identifying data sources for beef, sheep and dairy systems, together with collection and manipulation of input data. The results of the project provided unique insight into Scottish agricultural emissions, and form the framework of a tool with which the Scottish Government can define and assess policy decisions.
+
+## Innovate UK: Increasing efficiency and reducing waste in the UK beef supply chain
+Alasdair contributed to this research project throughout the course of my PhD. In addition to academic stakeholders, the combined research consortium formed a complete industry cross-section, with partners including J Sainsbury PLC and Anglo Beef Processors. Alasdair's contribution to the project comprised GHG model development, and subsequent quantitative analysis of the efficiency measures under consideration by the project team.
+
+# Personal
+
+Alasdair has been based in central Edinburgh since 2014. When not in front of a computer, he is most likely to be found up a mountain, repairing a classic motorcycle, or enjoying the vibrant Edinburgh arts scene.
+
+```{r, echo=FALSE, fig.align='center'}
+knitr::include_graphics("logo2.png", dpi = 400)
+```
