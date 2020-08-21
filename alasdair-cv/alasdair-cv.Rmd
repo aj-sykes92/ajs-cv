@@ -55,7 +55,6 @@ scholar::get_publications("bipLv_YAAAAJ") %>%
 
 # write out bib entries
 bibliography_entries("ajs-googlescholar.bib")
-
 ```
 
 # Skills portfolio
@@ -89,7 +88,7 @@ Alasdair presents on his work frequently, and is comfortable in both formal pres
 * Press conferences for the [\textcolor{blue}{agrecalc}](https://www.agrecalc.com) project *(Remote, 2020)*.
 * Consultation on carbon footprinting for the BBC's Countryfile program *(Remote, 2020)*.
 * Meetings with farmer groups around Scotland to discuss the latest climate science as it pertains to agriculture (2019).
-* A [\textcolor{blue}{presentation}](https://github.com/EdinbR/edinbr-talks/raw/master/2019-01-16/Alasdair%20Sykes%20-%20Fringebiscuit%20presentation%20v1%20(no%20tokens).pptx) to the Edinburgh R User Group on using R to collect and analyse data from Twitter *(Edinburgh, 2019)*.
+* A [\textcolor{blue}{presentation}](https://github.com/EdinbR/edinbr-talks/raw/master/2019-01-16/Alasdair%20Sykes%20-%20Fringebiscuit%20presentation%20v1%20(no%20tokens).pptx) to the Edinburgh R User Group on using R to collect and analyse web and Twitter data from the Edinburgh Festival Fringe *(Edinburgh, 2019)*.
 * An oral presentation on multi-disciplinary assessment of carbon sequestration in global agricultural soils at the International Conference on Agricultural GHG Emissions and Food Security *(Berlin, Germany 2018)*.
 *  An invitation by the European Innovation Partnership to participate as an expert panellist facilitating discussion of farm-level modelling tools for the EIP-AGRI Workshop *(Zagreb, Croatia, 2017)*.
 * An invited submission on approaches to farm-level modelling of GHG emissions at II SIGEE (2nd International Symposium on Greenhouse Gases in Agriculture), *(Campo Grande, Brazil, 2016)*. 
@@ -113,7 +112,7 @@ Alasdair contributed full-time to this NERC-funded multi-institutional project u
 
 ## Clean Growth through Sustainable Intensification (Defra, 2018--2020)
 
-To support agricultural policy decision-making by Defra, Alasdairs contribution to this project focused on the development of a number of technical ‘fiches’ providing rapid insight into the abatement potential and costs associated with a number of agricultural GHG mitigation measures. Alasdair developed the requisite models for a number of soil- and land-based mitigation measures, including several novel approaches which had seen no previous inclusion in the UK policy framework. This [\textcolor{blue}{interactive application}](https://alasdair-sykes.shinyapps.io/agroforestry-defra-prelim/) for agroforestry is one of the core outputs from this project.
+To support agricultural policy decision-making by Defra, Alasdair's contribution to this project focused on the development of a number of technical ‘fiches’ providing rapid insight into the abatement potential and costs associated with a number of agricultural GHG mitigation measures. Alasdair developed the requisite models for a number of soil- and land-based mitigation measures, including several novel measures which had seen no previous inclusion in the UK policy framework. This [\textcolor{blue}{interactive application}](https://alasdair-sykes.shinyapps.io/agroforestry-defra-prelim/) for agroforestry is one of the core outputs from this project.
 
 ## Literature review on carbon sequestration in the land use sectors (OECD, 2018)
 
@@ -124,11 +123,11 @@ A research team from SRUC was contracted to contribute to the Organisation for E
 To facilitate Scottish Govt. policy-makers, this project developed a decision support tool for tracking the emissions intensity of Scottish agricultural production. Alasdair provided research input into tool development by identifying data sources for beef, sheep and dairy systems, together with collection and manipulation of input data. The results of the project provided unique insight into Scottish agricultural emissions, and form the framework of a tool with which the Scottish Government can define and assess policy decisions.
 
 ## Innovate UK: Increasing efficiency and reducing waste in the UK beef supply chain
-Alasdair contributed to this research project throughout the course of my PhD. In addition to academic stakeholders, the combined research consortium formed a complete industry cross-section, with partners including J Sainsbury PLC and Anglo Beef Processors. Alasdair's contribution to the project comprised GHG model development, and subsequent quantitative analysis of the efficiency measures under consideration by the project team.
+Alasdair contributed to this research project throughout the course of his PhD. In addition to academic stakeholders, the combined research consortium formed a complete industry cross-section, with partners including J Sainsbury PLC and Anglo Beef Processors. Alasdair's contribution to the project comprised GHG model development, and subsequent quantitative analysis of the efficiency measures under consideration by the project team.
 
 # Personal
 
-Alasdair has been based in central Edinburgh since 2014. When not in front of a computer, he is most likely to be found up a mountain, repairing a classic motorcycle, or enjoying the vibrant Edinburgh arts scene.
+Alasdair has been based in central Edinburgh since 2014. If you take him out for beer or coffee, he will most likely talk to you about R, data science, vintage motorcycles or running. When not at his desk, he can typically be found up a mountain, riding his classic BMW bike, or enjoying the vibrant Edinburgh arts scene.
 
 ```{r, echo=FALSE, fig.align='center'}
 knitr::include_graphics("logo2.png", dpi = 400)
