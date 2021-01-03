@@ -63,7 +63,7 @@ bibliography_entries("ajs-googlescholar.bib")
 
 Alasdair manages the majority of his daily workflow via **R**, **RStudio**, **Git** and [\textcolor{blue}{GitHub}](https://www.github.com/aj-sykes92). His skills include:
 
-* R package development and building R-based software, such as [\textcolor{blue}{agrecalc}](https://www.agrecalc.com).
+* R package development and building R-based software. Alasdair built the model behind [\textcolor{blue}{agrecalc}](https://www.agrecalc.com), and is the builder and maintainer of the [\textcolor{blue}{soilc.ipcc}](https://github.com/aj-sykes92/soilc.ipcc) and [\textcolor{blue}{ggmacc}](https://github.com/aj-sykes92/ggmacc) R packages.
 * Web application creation with R Shiny, such as [\textcolor{blue}{this}](https://alasdair-sykes.shinyapps.io/agroforestry-defra-prelim/) recent project for the UK Government.
 * Dissemination of code and analysis with R Markdown. This CV is built using R Markdown and the `vitae` package. Alasdair's [\textcolor{blue}{personal website}](https://www.alasdairsykes.me) is created and maintained with R and `blogdown`.
 * Model fitting and validation, including leading-edge approaches e.g. support vector machine, random forest regression, artificial neural network models.
@@ -93,18 +93,21 @@ Alasdair presents on his work frequently, and is comfortable in both formal pres
 *  An invitation by the European Innovation Partnership to participate as an expert panellist facilitating discussion of farm-level modelling tools for the EIP-AGRI Workshop *(Zagreb, Croatia, 2017)*.
 * An invited submission on approaches to farm-level modelling of GHG emissions at II SIGEE (2nd International Symposium on Greenhouse Gases in Agriculture), *(Campo Grande, Brazil, 2016)*. 
 
+## Board membership
+Alasdair is an active member of the scientific board of [\textcolor{blue}{Agxiata}](https://agxiata.com), a company focused on promoting sustainability and innovation in the UK agricultural sector.
+
 ## Lecturing and module design
 Alasdair currently contributes to three University of Edinburgh MSc courses (Ecological Economics, Environmental Protection and Management and Soils and Sustainability). He teaches on R programming, environmental modelling, data science and quantitative statistics. In addition to lecture and workshop-based teaching formats, Alasdair also delivers fieldwork-based content on an annual multi-course MSc field trip to Imlil, Morocco (2016-2020). Beginning 2016, Alasdair designed a course module on cost-benefit analysis and Monte Carlo simulation which he has delivered for the last three academic years to Ecological Economics students.
 
 ## Student supervision
 Alasdair has supervised eight MSc-level research dissertations to date, the majority of which focused on carbon footprinting of agricultural systems. Alasdair also co-supervises an ongoing PhD project entitled *Exploring technical, economic and behavioural barriers to global soil carbon sequestration *.
+\newpage
 
 # Research and Experience
 
 ## The [\textcolor{blue}{agrecalc}](https://www.agrecalc.com) carbon footprinting project --- scientific and development lead (Scotland's Rural College, 2019--Ongoing)
 
 Alasdair gained his doctorate through development of carbon footprinting methodologies in the *agrecalc* carbon footprinting tool. Since graduating, he has become the scientific lead on commercial development of this model, which aims to be the best carbon foootprinting tool for global agriculture. Alasdair's role is to design and build the core model elements, to provide expert assistance to the *agrecalc* team in the field of carbon footprinting, and to ensure the tool reflects the most up-to-date climate science.
-\newpage
 
 ## Soils-R-GGREAT: Soils Research to deliver Greenhouse Gas Removals and Abatement Technologies (NERC, 2017--2020)
 
@@ -130,5 +133,5 @@ Alasdair contributed to this research project throughout the course of his PhD. 
 Alasdair has been based in central Edinburgh since 2014. If you take him out for beer or coffee, he will most likely talk to you about R, data science, vintage motorcycles or running. When not at his desk, he can typically be found up a mountain, riding his classic BMW bike, or enjoying the vibrant Edinburgh arts scene.
 
 ```{r, echo=FALSE, fig.align='center'}
-knitr::include_graphics("logo2.png", dpi = 400)
+knitr::include_graphics("logo2.png", dpi = 875)
 ```
