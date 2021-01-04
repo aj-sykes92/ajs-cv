@@ -45,3 +45,6 @@ vignettes/*.pdf
 
 # knitted cv file
 *.pdf
+
+# R script to push cv to other folders/repos
+file-copy.R
